@@ -1,17 +1,20 @@
 package symbol;
 
+import java.util.Scanner;
+
 public class Main {
-    private static void printAsterisk(int n){
+
+    static Scanner scanner = new Scanner(System.in);
+
+    private static void printAsterisk(int n) {
         printAsterisk(1, n);
     }
 
-    private static void printAsterisk(int i, int n){
-        // Print a line of i amount of asterisks
+    private static void printAsterisk(int i, int n) {
         for (int j = 0; j < i; j++) {
             System.out.print("*");
         }
         System.out.println();
-
         if (i < n) {
             i++;
             printAsterisk(i, n);
@@ -19,10 +22,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
-        // TODO: shivamratnani04@gmail.com you need to implement scanner here. Replace line 24 with input from user, and assign to variable input
-        int input = 15;
-
+        System.out.print("Number you want to repeat the symbol: ");
+        int input = scanner.nextInt();
         printAsterisk(input);
     }
 }
